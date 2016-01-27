@@ -37,12 +37,12 @@ class Usuario(models.Model):
     email_user = models.EmailField()
     senha = models.CharField(max_length=5)
 
-    def compraIngresso(self):
-	nome = raw_input("Digite o nome do evento")
-	for Evento.nome in listaEvento:
-		opcao = input("Deseja comprar ingresso?1 para sim e 2 para nao")
-		if (opcao == 1):
-			return true
-		if (opcao == 2):
-			return false
+#    def compraIngresso(self):
+#	nome = raw_input("Digite o nome do evento")
+#	for Evento.nome in listaEvento:
+#		opcao = input("Deseja comprar ingresso?1 para sim e 2 para nao")
+#		if (opcao == 1):
+#			return true
+#		if (opcao == 2):
+#			return false
 
