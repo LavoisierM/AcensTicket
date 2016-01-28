@@ -3,6 +3,8 @@ from .forms import PostForm
 from django.shortcuts import redirect
 from siteT.models import Post
 from .forms import UsuarioForm
+from siteT.models import Evento
+from .forms import EventoForm
 
 # Create your views here.
 def base(request):
@@ -35,4 +37,17 @@ def signup_user(request):
       usuario = UsuarioForm()
       ctx = {'usuario': usuario}
       return render(request, 'siteT/signup_user.html', ctx)
-    	
+
+def new_evento(request):
+     if request.method == "POST":
+         Evento = EventoForm(request.POST)
+         if Evento.is_valid():
+            Evento = Evento.save(commit=False)
+            Evento.save()
+            return redirect('siteT.views.new_evento')
+     else:
+      Evento = EventoForm()
+      ctx = {'Evento': Evento}
+      return render(request, 'siteT/new_evento.html', ctx)
+
+

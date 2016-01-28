@@ -31,7 +31,7 @@
     <![endif]-->
   </head>
 
-  <body style="background-color: black">
+  <body>
 
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
@@ -47,7 +47,7 @@
         <div id="navbar" class="navbar-collapse collapse">
           <form class="navbar-form navbar-right">
             <div class="form-group">
-              <input type="text" placeholder="Email" class="form-control">
+              <input type="text" placeholder="Usuario" class="form-control">
             </div>
             <div class="form-group">
               <input type="password" placeholder="Password" class="form-control">
@@ -59,13 +59,13 @@
     </nav>
 
     <!-- Main jumbotron for a primary marketing message or call to action -->
-    <div style="background-color: black"class="jumbotron">
+    <div class="jumbotron">
       <div class="container">
         <img src="http://www.rosarosarum.com.br/site/wp-content/themes/dagda/timthumb.php?src=%2Fimgs%2Fsocial%2F03.jpg&h=400&w=940&zc=1" />
-        <h1 style="font-family: Verdana; color: white">Bem vindo ao Ticket Facil!!</h1>
-        <p style="font-family: Verdana; color: white"><strong>Adquira seu ingresso com mais facilidade!!</strong></p>
-        <p style= "font-family: Verdana"><a class="btn btn-primary btn-lg" href="{% url 'siteT.views.signup_user' %}" role="button">Cadastre-se &raquo;</a></p>
-        <p style="font-family: Verdana"><a class="btn btn-primary btn-lg" href="{% url 'siteT.views.post_new' %}" role="button">Novo post<span class="glyphicon glyphicon-plus"></span></a>
+        <h1 style="font-family: Verdana">Bem vindo ao Ticket Facil!!</h1>
+        <p style="font-family: Verdana"><strong>Adquira seu ingresso com mais facilidade!!</strong></p>
+        <p style= "font-family: Verdana"><a class="btn btn-primary btn-lg" href="{% url 'siteT.views.signup_user' %}" role="button">Cadastre-se &raquo;</a>
+         <a class="btn btn-primary btn-lg" href="{% url 'siteT.views.new_evento' %}" role="button">Novo Evento &raquo;</span></a>
       </div>
     </div>
 
@@ -74,19 +74,10 @@
       <div class="row">
         <div class="col-md-4">
 	{% block content %}
-          <h2 style="font-family: Verdana; color: white">Morena mais cogituda agita cidade!!</h2>
-          <p style="font-family: Verdana; color: white">Show da Ivete Sangalo irá encher a cidade de Fortaleza, adquira seu ingresso já!! </p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
         </div>
         <div class="col-md-4">
-          <h2 style="font-family: Verdana; color: white">Iron Maiden, sucesso!</h2>
-          <p style="font-family: Verdana; color: white">Para os roqueiros de plantão, o show do Iron Maiden será um sucesso! Você não vai perder, vai?! </p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
        </div>
         <div class="col-md-4">
-          <h2 style="font-family: Verdana; color: white">Para os que curtem HQ</h2>
-          <p style="font-family: Verdana; color: white">Para os que gostam de cinema, o filme da vez é Deadpool! Leve sua gata para assistir!</p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
 	{% endblock %}
         </div>
       </div>
