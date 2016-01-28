@@ -28,14 +28,20 @@ class Evento(models.Model):
 
 class Cliente(models.Model):
     nome = models.CharField(max_length=20)
-    dataNascimento = models.DateField(blank=True, null=True)
-    CPF = models.CharField(max_length=11)
+    data_nascimento = models.DateField(blank=True, null=True)
+    cpf = models.CharField(max_length=11, default = 'blank')
     endereco = models.CharField
+
+    def __unicode__(self):
+        return self.nome
 
 class Usuario(models.Model):
     name_user = models.CharField(max_length=20)
     email_user = models.EmailField()
     senha = models.CharField(max_length=5)
+
+    def __unicode__(self):
+        return self.name_user
 
 #    def compraIngresso(self):
 #	nome = raw_input("Digite o nome do evento")

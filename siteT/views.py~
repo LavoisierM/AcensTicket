@@ -5,8 +5,8 @@ from siteT.models import Post
 from .forms import UsuarioForm
 
 # Create your views here.
-def base(request):
-	return render(request, 'siteT/base.html',{})
+def primeira(request):
+	return render(request, 'siteT/primeira.html',{})
 
 def post_detail (request, pk):
         post = get_object_or_404(Post, pk=pk)
@@ -25,14 +25,13 @@ def post_new(request):
         return render(request, 'siteT/post_edit.html', {'form': form})
 
 def signup_user(request):
-     if request.method == "POST":
-         usuario = UsuarioForm(request.POST)
-     	 if usuario.is_valid():
+    if request.method == "POST":
+        usuario = UsuarioForm(request.POST)
+    	if usuario.is_valid():
             usuario = usuario.save(commit=False)
             usuario.save()
-            return redirect('siteT.views.signup_user')
-     else:
-      usuario = UsuarioForm()
-      ctx = {'usuario': usuario}
-      return render(request, 'siteT/signup_user.html', ctx)
+            return redirect('siteT.views.signup_user', pk=post.pk)
+    else:
+        usuario = UsuarioForm()
+        return render(request, 'siteT/signup_user.html', {'usuario': usuario})
     	

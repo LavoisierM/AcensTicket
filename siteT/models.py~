@@ -24,12 +24,12 @@ class Evento(models.Model):
     titulo = models.CharField(max_length=10)
     data = models.DateTimeField(blank=True, null=True)
     descricao = models.TextField(max_length=200)
-    responsavel = models.ForeignKey('auth.User')
+    responsavel = models.OneToOneField('nome.Cliente')
 
 class Cliente(models.Model):
     nome = models.CharField(max_length=20)
     dataNascimento = models.DateField(blank=True, null=True)
-    CPF = models.CharField(max_length=8)
+    CPF = models.CharField(max_length=11)
     endereco = models.CharField
 
 class Usuario(models.Model):
@@ -37,12 +37,12 @@ class Usuario(models.Model):
     email_user = models.EmailField()
     senha = models.CharField(max_length=5)
 
-    def compraIngresso(self):
-	nome = raw_input("Digite o nome do evento")
-	for Evento.nome in listaEvento:
-		opcao = input("Deseja comprar ingresso?1 para sim e 2 para nao")
-		if (opcao == 1):
-			return true
-		if (opcao == 2):
-			return false
+#    def compraIngresso(self):
+#	nome = raw_input("Digite o nome do evento")
+#	for Evento.nome in listaEvento:
+#		opcao = input("Deseja comprar ingresso?1 para sim e 2 para nao")
+#		if (opcao == 1):
+#			return true
+#		if (opcao == 2):
+#			return false
 
