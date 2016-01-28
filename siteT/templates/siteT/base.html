@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
 
-    <title>Acens Ticket</title>
+    <title>Ticket Facil</title>
 
     <!-- Bootstrap core CSS -->
     <link href="../../static/css/bootstrap.min.css" rel="stylesheet">
@@ -31,7 +31,7 @@
     <![endif]-->
   </head>
 
-  <body>
+  <body style="background-color: black">
 
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
@@ -42,7 +42,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Project name</a>
+          <a style="font-family: Trajan; font-size: 20px"class="navbar-brand" href="#">Ticket Facil</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <form class="navbar-form navbar-right">
@@ -59,12 +59,13 @@
     </nav>
 
     <!-- Main jumbotron for a primary marketing message or call to action -->
-    <div class="jumbotron">
+    <div style="background-color: black"class="jumbotron">
       <div class="container">
-        <h1>Bem vindo ao Ticket Facil!!</h1>
-	<a href="{% url 'siteT.views.post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
-        <p><strong>Adquira seu ingresso com mais facilidade!!</strong></p>
-        <p><a class="btn btn-primary btn-lg" href="{% url 'siteT.views.signup_user' %}" role="button">Cadastre-se &raquo;</a></p>
+        <img src="http://www.rosarosarum.com.br/site/wp-content/themes/dagda/timthumb.php?src=%2Fimgs%2Fsocial%2F03.jpg&h=400&w=940&zc=1" />
+        <h1 style="font-family: Verdana; color: white">Bem vindo ao Ticket Facil!!</h1>
+        <p style="font-family: Verdana; color: white"><strong>Adquira seu ingresso com mais facilidade!!</strong></p>
+        <p style= "font-family: Verdana"><a class="btn btn-primary btn-lg" href="{% url 'siteT.views.signup_user' %}" role="button">Cadastre-se &raquo;</a></p>
+        <p style="font-family: Verdana"><a class="btn btn-primary btn-lg" href="{% url 'siteT.views.post_new' %}" role="button">Novo post<span class="glyphicon glyphicon-plus"></span></a>
       </div>
     </div>
 
@@ -73,18 +74,18 @@
       <div class="row">
         <div class="col-md-4">
 	{% block content %}
-          <h2>Morena mais cogituda agita cidade!!</h2>
-          <p>Show da Ivete Sangalo irá encher a cidade de Fortaleza, adquira seu ingresso já!! </p>
+          <h2 style="font-family: Verdana; color: white">Morena mais cogituda agita cidade!!</h2>
+          <p style="font-family: Verdana; color: white">Show da Ivete Sangalo irá encher a cidade de Fortaleza, adquira seu ingresso já!! </p>
           <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
         </div>
         <div class="col-md-4">
-          <h2>Iron Maiden, sucesso!</h2>
-          <p>Para os roqueiros de plantão, o show do Iron Maiden será um sucesso! Você não vai perder, vai?! </p>
+          <h2 style="font-family: Verdana; color: white">Iron Maiden, sucesso!</h2>
+          <p style="font-family: Verdana; color: white">Para os roqueiros de plantão, o show do Iron Maiden será um sucesso! Você não vai perder, vai?! </p>
           <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
        </div>
         <div class="col-md-4">
-          <h2>Para os que curtem HQ</h2>
-          <p>Para os que gostam de cinema, o filme da vez é Deadpool! Leve sua gata para assistir!</p>
+          <h2 style="font-family: Verdana; color: white">Para os que curtem HQ</h2>
+          <p style="font-family: Verdana; color: white">Para os que gostam de cinema, o filme da vez é Deadpool! Leve sua gata para assistir!</p>
           <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
 	{% endblock %}
         </div>
