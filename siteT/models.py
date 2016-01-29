@@ -19,12 +19,12 @@ class Post(models.Model):
         return self.title
 
 class Evento(models.Model):
-    listaEvento = list(range(100))
+    
     cod = models.CharField(max_length=2)
     titulo = models.CharField(max_length=10)
     data = models.DateTimeField(blank=True, null=True)
     descricao = models.TextField(max_length=200)
-    responsavel = models.ForeignKey('Cliente')
+    responsavel = models.ForeignKey('auth.User')
 
 class Cliente(models.Model):
     nome = models.CharField(max_length=20)
@@ -44,11 +44,11 @@ class Usuario(models.Model):
         return self.name_user
 
 #    def compraIngresso(self):
-#	nome = raw_input("Digite o nome do evento")
-#	for Evento.nome in listaEvento:
-#		opcao = input("Deseja comprar ingresso?1 para sim e 2 para nao")
-#		if (opcao == 1):
-#			return true
-#		if (opcao == 2):
-#			return false
+#   nome = raw_input("Digite o nome do evento")
+#   for Evento.nome in listaEvento:
+#       opcao = input("Deseja comprar ingresso?1 para sim e 2 para nao")
+#       if (opcao == 1):
+#           return true
+#       if (opcao == 2):
+#           return false
 

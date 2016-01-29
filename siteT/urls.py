@@ -6,5 +6,7 @@ urlpatterns = [
     url(r'^post/(?P<pk>[0-9]+)/$', views.post_detail),
     url(r'^post/new/$', views.post_new, name='post_new'),
     url(r'^signup/user/$', views.signup_user, name='signup_user'),
-    url(r'^newevento/evento/$', views.new_evento, name='new_evento'),   
+    url(r'^newevento/evento/$', views.new_evento, name='new_evento'),
+    url(r'^login/$', views.login, name='login'),
+    url(r'^sair/$', views.sair,  name='sair'),    
 ]
