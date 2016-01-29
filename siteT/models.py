@@ -24,7 +24,7 @@ class Evento(models.Model):
     titulo = models.CharField(max_length=10)
     data = models.DateTimeField(blank=True, null=True)
     descricao = models.TextField(max_length=200)
-    responsavel = models.ForeignKey('auth.User')
+    responsavel = models.ForeignKey('Cliente')
 
 class Cliente(models.Model):
     nome = models.CharField(max_length=20)
