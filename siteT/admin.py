@@ -11,9 +11,12 @@ class UsuarioAdmin(ModelAdmin):
 class ClienteAdmin(ModelAdmin):
 	list_display = ['nome','data_nascimento', 'cpf', 'endereco']
 
+class EventoAdmin(ModelAdmin):
+	list_display = ['cod','titulo']
+
 
 admin.site.register(Post)
-admin.site.register(Evento)
-admin.site.register(Cliente)
+admin.site.register(Evento, EventoAdmin)
+admin.site.register(Cliente,ClienteAdmin)
 admin.site.register(Usuario, UsuarioAdmin)
 
